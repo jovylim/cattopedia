@@ -1,10 +1,28 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Main from "./pages/Main";
+import RandomCat from "./pages/RandomCat";
+import BrowseBreeds from "./pages/BrowseBreeds";
+import CustomSearch from "./pages/CustomSearch";
 
 function App() {
   return (
-    <div>
-      <h2>GA SEI</h2>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route exact path="/random-cat">
+          <RandomCat />
+        </Route>
+        <Route exact path="/browse-breeds">
+          <BrowseBreeds />
+        </Route>
+        <Route exact path="/custom-search">
+          <CustomSearch />
+        </Route>
+      </Switch>
+    </>
   );
 }
 
