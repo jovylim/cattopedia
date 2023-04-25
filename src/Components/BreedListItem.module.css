@@ -1,8 +1,10 @@
 .breed {
   display: block;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
-  border: solid black 5px;
   width: fit-content;
-  margin: 0 auto;
+  margin: 5px auto;
+  padding: 0 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }

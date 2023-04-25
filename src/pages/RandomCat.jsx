@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import RandomCatPic from "../Components/RandomCatPic";
 
 const RandomCat = () => {
   const [data, setData] = useState([]);
+  const [catUrl, setCatUrl] = useState("");
 
   const getData = async () => {
     const res = await fetch(
@@ -11,12 +11,23 @@ const RandomCat = () => {
     );
     const cat = await res.json();
     setData(cat);
+    console.log("inside get data");
   };
+
+  useEffect(() => {
+    if (data) {
+      data.map((item, idx) => {
+        setCatUrl(item.url);
+      });
+    }
+  }, [data]);
+
   useEffect(() => {
     getData();
+    console.log("inside get data use effect");
   }, []);
 
-  return <RandomCatPic data={data}></RandomCatPic>;
+  return <img src={catUrl}></img>;
 };
 
 export default RandomCat;
