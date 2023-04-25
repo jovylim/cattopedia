@@ -11,7 +11,6 @@ const RandomCat = () => {
     const res = await fetch(import.meta.env.VITE_SERVER);
     const cat = await res.json();
     setData(cat);
-    console.log("inside get data");
   };
 
   useEffect(() => {
@@ -24,7 +23,6 @@ const RandomCat = () => {
 
   useEffect(() => {
     getData();
-    console.log("inside get data use effect");
   }, []);
 
   return (

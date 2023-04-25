@@ -18,3 +18,33 @@
   z-index: 100;
   overflow: auto;
 }
+
+.picture {
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.name {
+  text-align: center;
+}
+
+.texts {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.weight {
+  text-align: center;
+}
+
+.weightTexts {
+  display: inline;
+}
+
+.close {
+  display: block;
+  margin: 0 auto;
+}
