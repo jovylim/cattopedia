@@ -1,21 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import styles from "./RandomCat.module.css";
+import { Link, NavLink } from "react-router-dom";
 
 const RandomCat = () => {
   const [data, setData] = useState([]);
   const [catUrl, setCatUrl] = useState("");
 
   const getData = async () => {
-    const res = await fetch(
-      "https://api.thecatapi.com/v1/images/search?api_key=live_TUfkBM4ab1BTafYrbpbgiW6V3vHtJgzcSBISe7PAFOpeK8Qu02LMUT2jp0NLO9Tw"
-    );
+    const res = await fetch(import.meta.env.VITE_SERVER);
     const cat = await res.json();
     setData(cat);
     console.log("inside get data");
   };
 
   useEffect(() => {
-    if (data) {
+    if (!catUrl) {
       data.map((item, idx) => {
         setCatUrl(item.url);
       });
@@ -27,7 +27,14 @@ const RandomCat = () => {
     console.log("inside get data use effect");
   }, []);
 
-  return <img src={catUrl}></img>;
+  return (
+    <div className={styles.container}>
+      <img className={styles.pic} src={catUrl}></img>
+      <NavLink className={styles.home} to="/">
+        back to home
+      </NavLink>
+    </div>
+  );
 };
 
 export default RandomCat;

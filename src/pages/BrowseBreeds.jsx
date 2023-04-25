@@ -19,7 +19,13 @@ const BrowseBreeds = () => {
   return (
     <div className={styles.container}>
       {data.map((item) => {
-        return <BreedListItem key={item.id} data={item}></BreedListItem>;
+        return (
+          <BreedListItem
+            key={item.id}
+            name={item.name}
+            id={item.id}
+          ></BreedListItem>
+        );
       })}
     </div>
   );
