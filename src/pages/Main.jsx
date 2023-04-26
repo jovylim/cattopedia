@@ -5,6 +5,8 @@ import styles from "./Main.module.css";
 const Main = () => {
   return (
     <div className={styles.homepage}>
+      <br />
+      <h1 className={styles.title}>WELCOME TO CATTOPEDIA</h1>
       <nav>
         <ul className={styles.menu}>
           <li>
