@@ -28,11 +28,20 @@
 
 .name {
   text-align: center;
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
 }
 
 .texts {
   display: block;
   margin: 0 auto;
+  padding: 0px 10px;
+  text-align: left;
+  font-family: "Pompiere", cursive;
+  font-size: 22px;
+}
+
+.desc {
   text-align: center;
 }
 

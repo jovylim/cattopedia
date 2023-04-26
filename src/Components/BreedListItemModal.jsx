@@ -28,7 +28,9 @@ const Overlay = (props) => {
       <div className={styles.modal}>
         <h1 className={styles.name}>{data[0].name}</h1>
         <img className={styles.picture} src={props.breedData[0].url}></img>
-        <div className={styles.texts}>{data[0].description}</div>
+        <div className={`${styles.texts} ${styles.desc}`}>
+          {data[0].description}
+        </div>
         <div className={styles.texts}>Temperament: {data[0].temperament}</div>
         <div className={styles.texts}>
           Life Span (years): {data[0].life_span}

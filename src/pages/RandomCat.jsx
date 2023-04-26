@@ -13,6 +13,11 @@ const RandomCat = () => {
     setData(cat);
   };
 
+  const moreCat = () => {
+    setCatUrl("");
+    getData();
+  };
+
   useEffect(() => {
     if (!catUrl) {
       data.map((item, idx) => {
@@ -28,6 +33,14 @@ const RandomCat = () => {
   return (
     <div className={styles.container}>
       <img className={styles.pic} src={catUrl}></img>
+      <button
+        className={styles.again}
+        onClick={() => {
+          moreCat();
+        }}
+      >
+        one more cat!!!!!
+      </button>
       <NavLink className={styles.home} to="/">
         back to home
       </NavLink>

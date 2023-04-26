@@ -8,6 +8,26 @@
 .home {
   display: block;
   width: fit-content;
-  font-size: 30px;
+  font-size: 40px;
   margin: 0 auto;
+  font-family: "Amatic SC", cursive;
+  text-decoration: none;
+  color: black;
+}
+
+.again {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 40px;
+}
+
+.home:hover {
+  opacity: 0.3;
+}
+
+.again:hover {
+  opacity: 0.3;
 }

@@ -1,5 +1,5 @@
 .homepage {
-  background-image: url("catsbackground.jpeg");
+  background-image: url("./pictures/homebg.jpeg");
   height: 700px;
 }
 
@@ -7,7 +7,7 @@
   position: absolute;
   height: 300px;
   width: 300px;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.3); */
   margin: 15% 36%;
   list-style: none;
   padding: 0;
@@ -16,9 +16,16 @@
 
 .links {
   color: black;
+  background-color: white;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 40px;
   height: 100px;
   display: block;
   margin: auto;
+  padding-top: 15px;
+  font-family: "Amatic SC", cursive;
+}
+
+.links:hover {
+  opacity: 0.75;
 }
