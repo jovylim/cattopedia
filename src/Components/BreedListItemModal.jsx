@@ -12,13 +12,17 @@ const Overlay = (props) => {
     { name: "Child Friendliness", value: data[0].child_friendly },
     { name: "Dog Friendliness", value: data[0].dog_friendly },
     { name: "Energy Level", value: data[0].energy_level },
-    { name: "Hypoallergenic", value: data[0].hypoallergenic },
     { name: "Intelligence", value: data[0].intelligence },
     { name: "Shedding Level", value: data[0].shedding_level },
     { name: "Social Needs", value: data[0].social_needs },
     { name: "Stranger Friendly", value: data[0].stranger_friendly },
     { name: "Vocalisation", value: data[0].vocalisation },
   ];
+
+  let hypoallergenic = "No";
+  if (data[0].hypoallergenic) {
+    hypoallergenic = "Yes";
+  }
 
   const [currWeight, setCurrWeight] = useState(weightData.metric);
   const [currWeightType, setCurrWeightType] = useState("kg");
@@ -52,6 +56,11 @@ const Overlay = (props) => {
         <div className={`${styles.texts} row`}>
           <div className="col-md-4">Temperament:</div>
           <div className="col-md-8">{data[0].temperament}</div>
+        </div>
+
+        <div className={`${styles.texts} row`}>
+          <div className="col-md-4">Hypoallergenic:</div>
+          <div className="col-md-8">{hypoallergenic}</div>
         </div>
 
         <div className={`${styles.texts} row`}>
