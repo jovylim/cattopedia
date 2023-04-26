@@ -10,7 +10,8 @@
 
 .modal {
   position: fixed;
-  background: white;
+  background-image: url("./pictures/modalbg.png");
+  background-size: cover;
   top: 5vh;
   bottom: 10vh;
   left: 10%;
@@ -33,27 +34,45 @@
 }
 
 .texts {
-  display: block;
   margin: 0 auto;
-  padding: 0px 10px;
+  padding: 0 20%;
   text-align: left;
   font-family: "Pompiere", cursive;
   font-size: 22px;
 }
 
 .desc {
+  padding-bottom: 3%;
+  display: block;
   text-align: center;
 }
 
-.weight {
-  text-align: center;
+.weightButton {
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: white;
+  font-size: 75%;
+  width: auto;
 }
 
-.weightTexts {
-  display: inline;
+.weightButton:hover {
+  opacity: 0.5;
 }
 
 .close {
+  font-family: "Pompiere", cursive;
+  font-size: 22px;
   display: block;
   margin: 0 auto;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: white;
+}
+
+.close:hover {
+  opacity: 0.5;
+}
+
+.ratingPics {
+  width: 34%;
 }

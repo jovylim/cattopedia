@@ -9,17 +9,17 @@ const Main = () => {
         <ul className={styles.menu}>
           <li>
             <NavLink className={styles.links} to="/random-cat">
-              RANDOM CAT!!!!!
+              random cat !!!!!
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className={styles.links} to="/kinda-random-cat">
+              kinda random cat...?
             </NavLink>
           </li>
           <li>
             <NavLink className={styles.links} to="/browse-breeds">
-              Browse By Breeds
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={styles.links} to="/custom-search">
-              Custom Search
+              browse by breeds
             </NavLink>
           </li>
         </ul>

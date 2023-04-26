@@ -1,6 +1,7 @@
 import React from "react";
 import BreedListItem from "../Components/BreedListItem";
 import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./BrowseBreeds.module.css";
 
 const BrowseBreeds = () => {
@@ -18,6 +19,10 @@ const BrowseBreeds = () => {
 
   return (
     <div className={styles.container}>
+      <NavLink className={styles.home} to="/">
+        back to home
+      </NavLink>
+      <br />
       {data.map((item) => {
         return (
           <BreedListItem

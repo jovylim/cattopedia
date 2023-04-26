@@ -1,0 +1,47 @@
+.container {
+  background-image: url("./pictures/kindarandomcatbg.png");
+  height: 700px;
+  background-size: cover;
+}
+
+.home {
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 35px;
+  font-family: "Amatic SC", cursive;
+  color: black;
+  border: solid white 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.home:hover {
+  opacity: 0.5;
+}
+
+.selection {
+  position: absolute;
+  font-family: "Amatic SC", cursive;
+  font-size: 35px;
+  background-color: white;
+  text-align: center;
+  margin: 20% 30%;
+  width: 40%;
+  height: 30%;
+  padding: 25px;
+}
+
+.now {
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: white;
+  font-size: 75%;
+  width: auto;
+}
+
+.now:hover {
+  opacity: 0.5;
+}
