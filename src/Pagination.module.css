@@ -1,6 +1,7 @@
 .paginationContainer {
   display: flex;
   list-style-type: none;
+  justify-content: center;
 }
 
 .paginationItem {
@@ -17,6 +18,11 @@
   line-height: 1.43;
   font-size: 13px;
   min-width: 32px;
+}
+
+.paginationItem:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
 }
 
 .dots:hover {
@@ -44,4 +50,12 @@
   border-right: 0.12em solid rgba(0, 0, 0, 0.87);
   border-top: 0.12em solid rgba(0, 0, 0, 0.87);
   transform: rotate(45deg);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.selected {
+  background-color: rgba(0, 0, 0, 0.08);
 }
