@@ -10,7 +10,7 @@
 
 .modal {
   position: fixed;
-  background-image: url("./pictures/modalbg.png");
+  background-image: url("/pictures/modalbg.png");
   background-size: cover;
   top: 5vh;
   bottom: 10vh;

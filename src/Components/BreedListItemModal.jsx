@@ -85,7 +85,7 @@ const Overlay = (props) => {
               <div className="col-md-4">{item.name}:</div>
               <img
                 className={`${styles.ratingPics} col-md-8`}
-                src={`./pictures/ratings/${item.value}cats.png`}
+                src={`/pictures/ratings/${item.value}cats.png`}
               ></img>
             </div>
           );

@@ -12,7 +12,7 @@ const Overlay = (props) => {
         <div className={styles.message}>
           {`Jokes aside, since the data on this website belong to TheCatAPI, I have no control over the removal of any data. The data for the ${props.name} is no longer available. :(`}
         </div>
-        <img src="../../pictures/sorrycat.jpeg" className={styles.sorry}></img>
+        <img src="/pictures/sorrycat.jpeg" className={styles.sorry}></img>
         <button
           className={styles.close}
           onClick={() => props.setShowBreedErrorModal(false)}

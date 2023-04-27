@@ -1,5 +1,5 @@
 .container {
-  background-image: url("./pictures/catsbreedsbg.png");
+  background-image: url("/pictures/catsbreedsbg.png");
   height: 100vh;
   background-size: contain;
 }
