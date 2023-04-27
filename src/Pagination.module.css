@@ -14,16 +14,12 @@
   align-items: center;
   border-radius: 15px;
   font-size: 20px;
-  background-color: rgba(244, 100, 189, 0.382);
+  background-color: rgba(255, 255, 255);
 }
 
 .paginationItem:hover {
   background-color: rgba(0, 0, 0, 0.04);
   cursor: pointer;
-}
-
-.paginationItem:active {
-  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .dots:hover {

@@ -16,11 +16,7 @@ const BrowseBreeds = (props) => {
     const firstPageIndex = (currentPage - 1) * pageSize;
     const lastPageIndex = firstPageIndex + pageSize;
     return data.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
-
-  useEffect(() => {
-    console.log(currData);
-  });
+  }, [currentPage, props.data]);
 
   return (
     <div className={styles.container}>
