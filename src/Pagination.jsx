@@ -1,5 +1,4 @@
 import React from "react";
-import classnames from "classnames";
 import { usePagination, DOTS } from "./usePagination";
 import styles from "./Pagination.module.css";
 
@@ -39,13 +38,8 @@ const Pagination = (props) => {
 
   return (
     <ul className={styles.paginationContainer}>
-      <li
-        className={classnames(`${styles.paginationItem}`, {
-          disabled: currentPage === 1,
-        })}
-        onClick={onPrevious}
-      >
-        <div className={styles.arrowLeft} />
+      <li className={styles.paginationItem} onClick={onPrevious}>
+        <div>{"<"}</div>
       </li>
       {paginationRange.map((pageNumber, idx) => {
         if (pageNumber === DOTS) {
@@ -58,22 +52,15 @@ const Pagination = (props) => {
         return (
           <li
             key={idx}
-            className={classnames(`${styles.paginationItem}`, {
-              selected: pageNumber === currentPage,
-            })}
+            className={styles.paginationItem}
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}
           </li>
         );
       })}
-      <li
-        className={classnames(`${styles.paginationItem}`, {
-          disabled: currentPage === lastPage,
-        })}
-        onClick={onNext}
-      >
-        <div className={styles.arrowRight} />
+      <li className={styles.paginationItem} onClick={onNext}>
+        <div>{">"}</div>
       </li>
     </ul>
   );

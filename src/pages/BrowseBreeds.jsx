@@ -18,12 +18,22 @@ const BrowseBreeds = (props) => {
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
 
+  useEffect(() => {
+    console.log(currData);
+  });
+
   return (
     <div className={styles.container}>
       <NavLink className={styles.home} to="/">
         back to home
       </NavLink>
       <br />
+      <Pagination
+        currentPage={currentPage}
+        totalCount={data.length}
+        pageSize={pageSize}
+        onPageChange={(page) => setCurrentPage(page)}
+      />
       {currData.map((item) => {
         return (
           <BreedListItem
@@ -33,12 +43,6 @@ const BrowseBreeds = (props) => {
           ></BreedListItem>
         );
       })}
-      <Pagination
-        currentPage={currentPage}
-        totalCount={data.length}
-        pageSize={pageSize}
-        onPageChange={(page) => setCurrentPage(page)}
-      />
     </div>
   );
 };
