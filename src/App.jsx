@@ -1,11 +1,24 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Main from "./pages/Main";
 import RandomCat from "./pages/RandomCat";
 import BrowseBreeds from "./pages/BrowseBreeds";
 import KindaRandomCat from "./pages/KindaRandomCat";
 
 function App() {
+  const [breedData, setBreedData] = useState([]);
+
+  const getData = async () => {
+    const res = await fetch("https://api.thecatapi.com/v1/breeds");
+    const cat = await res.json();
+    setBreedData(cat);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <Switch>
@@ -19,7 +32,7 @@ function App() {
           <KindaRandomCat />
         </Route>
         <Route exact path="/browse-breeds">
-          <BrowseBreeds />
+          <BrowseBreeds data={breedData} />
         </Route>
       </Switch>
     </>

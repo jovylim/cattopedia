@@ -6,18 +6,8 @@ import { Link, NavLink } from "react-router-dom";
 import styles from "./BrowseBreeds.module.css";
 import { useMemo } from "react";
 
-const BrowseBreeds = () => {
-  const [data, setData] = useState([]);
-
-  const getData = async () => {
-    const res = await fetch("https://api.thecatapi.com/v1/breeds");
-    const cat = await res.json();
-    setData(cat);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
+const BrowseBreeds = (props) => {
+  const data = props.data;
 
   let pageSize = 10;
   const [currentPage, setCurrentPage] = useState(1);
