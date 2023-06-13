@@ -1,5 +1,7 @@
 # cattopedia
 
+link to app: https://cattopedia.netlify.app/
+
 catto!!!!!!!!!!
 a cat exploring page where users can get random pictures of cats, semi-random pictures of cats, and look at cat breed info.
 credits: cattopedia uses data from The Cat API (https://thecatapi.com/)
